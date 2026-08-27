@@ -1,0 +1,21 @@
+{
+	"name": "cerisebot",
+	"version": "1.0.0",
+	"description": "Bot Discord en JavaScript",
+	"main": "src/index.js",
+	"type": "module",
+	"scripts": {
+		"start": "node src/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"author": "Carl DELRIEU",
+	"license": "MIT",
+	"private": true,
+	"dependencies": {
+		"discord.js": "^14.27.0",
+		"dotenv": "^17.4.2"
+	}
+}
