@@ -1,0 +1,102 @@
+name: "🐞 Bug Report"
+description: Report a problem or unexpected behavior with the bot
+title: "[Bug]: "
+labels: [
+  "bug", 
+  "needs-triage"
+]
+assignees: 
+  - Carl-Delrieu
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this bug!
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked that no similar issue already exists
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug description
+      description: A clear and concise description of the problem
+      placeholder: "When I use the /command, the bot does X instead of Y..."
+    validations:
+      required: true
+
+  - type: input
+    id: command
+    attributes:
+      label: Command / event involved
+      description: Which command, slash command, or event triggers the bug?
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: How can this be reproduced?
+      placeholder: |
+        1. Run '/command args'
+        2. Wait for the bot's response
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should the bot normally do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots (e.g. Discord embed, message output)
+    validations:
+      required: false
+
+  - type: input
+    id: bot-version
+    attributes:
+      label: Bot version / commit
+      description: Version number, tag, or commit hash
+      placeholder: "e.g. v2.3.1 or a1b2c3d"
+    validations:
+      required: true
+
+  - type: textarea
+    id: intents
+    attributes:
+      label: Gateway intents enabled
+      description: Which intents are enabled on the bot (if relevant to the bug)?
+      placeholder: "e.g. GUILD_MESSAGES, MESSAGE_CONTENT, GUILD_MEMBERS"
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Server size, permissions, sharding setup, or anything else relevant
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: tested
+    attributes:
+      label: Testing
+      options:
+        - label: I have tested with the latest available version
+          required: false

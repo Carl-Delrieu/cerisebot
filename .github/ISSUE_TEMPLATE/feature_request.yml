@@ -1,0 +1,71 @@
+name: "🚀 Feature Request"
+description: Suggest a new feature, command or improvement for the bot
+title: "[Feature]: "
+labels: [
+  "enhancement",
+  "needs-triage"
+]
+assignees: 
+  - Carl-Delrieu
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a new feature!
+  
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked that no similar issue already exists
+          required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature category
+      options:
+        - New command
+        - Moderation
+        - Utility
+        - Other
+    validations:
+      required: false
+    
+  - type: textarea
+    id: feature
+    attributes:
+      label: Proposed solution
+      description: Describe the feature, command or behavior you'd like to see
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you thought of other solutions or workarouds?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I'm willing to contribute this feature if needed
+          required: false  
